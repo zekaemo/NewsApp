@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking, Dimensions } from 'react-native';
+
+const { width } = Dimensions.get('window'); // Get window width for responsiveness
 
 const AboutScreen = () => {
   const openContactLink = () => {
@@ -28,7 +30,7 @@ const AboutScreen = () => {
         Thank You for Choosing NewsApp!
       </Text>
 
-      {/* Kotak Contact Us */}
+      {/* Contact Us Box */}
       <TouchableOpacity style={styles.contactBox} onPress={openContactLink}>
         <Text style={styles.contactText}>Contact Us</Text>
       </TouchableOpacity>
@@ -38,9 +40,9 @@ const AboutScreen = () => {
 
 const styles = StyleSheet.create({
   container: { padding: 20, backgroundColor: '#fff', flexGrow: 1, justifyContent: 'center' },
-  title: { fontSize: 30, fontWeight: '900', textAlign: 'center', marginBottom: 20, marginRight: 100, marginLeft: 50},
-  subtheme: { fontSize: 20, fontWeight: '700', textAlign: "left", marginBottom: 15,marginRight: 100, marginLeft: 50 },
-  paragraph: { fontSize: 16, color: '#333', textAlign: 'justify', marginBottom: 15 ,marginRight: 100, marginLeft: 50},
+  title: { fontSize: width * 0.08, fontWeight: '900', textAlign: 'center', marginBottom: 20 },
+  subtheme: { fontSize: width * 0.06, fontWeight: '700', textAlign: "left", marginBottom: 15 },
+  paragraph: { fontSize: width * 0.04, color: '#333', textAlign: 'justify', marginBottom: 15 },
   
   contactBox: {
     marginTop: 50,
@@ -48,7 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#007bff',
     borderRadius: 10,
     alignSelf: 'center',
-    width: 150,
+    width: width * 0.6, // Makes the button width responsive
     height: 50,
   },
   contactText: {
