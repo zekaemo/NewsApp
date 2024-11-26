@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
   published: { fontSize: 12, color: 'gray', marginBottom: 10 },
   description: { fontSize: 16, marginBottom: 10 },
   content: { fontSize: 14, color: '#333', marginBottom: 20 },
+  button: {color: '#fff18f'}
 });
 
 export default DetailScreen;
