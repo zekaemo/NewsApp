@@ -32,7 +32,7 @@ To run this program, kindly follow these following steps:
    npm install
 
 4. **Save the data locally:**
-    ``bash
+    ```bash
     expo install @react-native-async-storage/async-storage
 
 5. **Start the Expo Project:**
