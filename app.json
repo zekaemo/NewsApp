@@ -19,10 +19,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/newsApp_logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.zekaemo.newsApp"
     },
     "web": {
       "favicon": "./assets/newsApp_logo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6477087c-4321-494e-b678-9b552c3a5555"
+      }
     }
   }
 }
