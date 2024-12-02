@@ -4,8 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 const NewsCard = ({ news, onPress, isFavorite }) => {
-  const navigation = useNavigation(); // Gunakan navigasi untuk berpindah halaman
-
+  const navigation = useNavigation();
+  
   return (
     <TouchableOpacity 
       style={styles.card} 

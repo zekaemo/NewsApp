@@ -12,6 +12,9 @@ import DetailScreen from './screens/DetailScreen';
 import VideoDetailScreen from './screens/VideoDetailScreen';
 import AboutScreen from './screens/AboutScreen';
 import { FavoritesProvider } from './FavoritesContext';
+import SourcesScreen from './screens/SourcesScreen';
+import SourceDetailScreen from './screens/SourceDetailScreen';
+
 
 // Error Boundary component
 class ErrorBoundary extends Component {
@@ -56,6 +59,16 @@ function MainTabs() {
           ),
         }}
       />
+      <Tab.Screen
+        name="Source"
+        component={SourcesScreen} // Tambahkan AboutScreen sebagai tab baru
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="news" color={color} size={size} />
+          ),
+        }}
+      />
+
       <Tab.Screen
       name="Video"
       component={VideoScreen}
@@ -104,6 +117,8 @@ export default function App() {
           <Stack.Screen name="MainTabs" component={MainTabs} options={{ headerShown: false }} />
           <Stack.Screen name="Detail" component={DetailScreen} />
           <Stack.Screen name="VideoDetail" component={VideoDetailScreen} />
+          <Stack.Screen name="Sources" component={SourcesScreen} />
+          <Stack.Screen name="SourceDetail" component={SourceDetailScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </FavoritesProvider>

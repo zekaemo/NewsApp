@@ -49,16 +49,11 @@ const HomeScreen = () => {
       />
 
       {/* Scrollable Category Tabs */}
-      <ScrollView
-        horizontal
-        style={[styles.tabContainer, { height: height * 0.08 }]} // Dynamically adjust height
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.tabContentContainer}
-      >
+      <View style={styles.tabContainer}>
         {['general', 'business', 'entertainment', 'health', 'science', 'sports', 'technology'].map((cat) => (
           <CategoryTab key={cat} category={cat} selectedCategory={category} onPress={setCategory} />
         ))}
-      </ScrollView>
+      </View>
 
       {/* News List */}
       <FlatList
@@ -78,25 +73,7 @@ const HomeScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 20,
-  },
-  input: {
-    borderColor: '#ddd',
-    borderWidth: 1,
-    padding: 10,
-    borderRadius: 5,
-    margin: 10,
-  },
-  tabContainer: {
-    flexGrow: 0, // Prevent shrinking
-    marginBottom: 10,
-  },
-  tabContentContainer: {
-    paddingHorizontal: 5,
-    alignItems: 'center',
-  },
+  container: { flex: 1, paddingTop: 20 },
+  tabContainer: { flexDirection: 'row', padding: 10 },
 });
-
 export default HomeScreen;
